@@ -195,7 +195,8 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
-    return ""
+
+    return
 
     # <QUESTION 9>
 
@@ -212,7 +213,21 @@ def eight(string, num):
     # There are no hints for this question.
 
 def nine(string1, string2):
-    return False
+    s1 = string1
+    s2 = string2
+    if len(s2)>len(s1):
+        temp = s1
+        s1 = s2
+        s2 = temp
+    count = {s1[i] : 0 for i in range(len(s1))}
+     
+    for i in range(len(s1)):
+        count[s1[i]] += 1
+    for i in range(len(s2)):
+        if (count.get(s2[i]) == None or count[s2[i]] == 0):
+            return False
+        count[s2[i]] -= 1
+    return True
 
     # <QUESTION 10>
 
