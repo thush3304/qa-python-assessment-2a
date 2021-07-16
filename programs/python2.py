@@ -32,7 +32,7 @@
 def one(string):
     new = ''
     for char in string:
-        new += char*2
+        new += char*3
     return new
     # <QUESTION 2>
 
@@ -245,4 +245,5 @@ def nine(string1, string2):
     # Think about nesting for loops.
 
 def ten(a, b):
+
     return []
