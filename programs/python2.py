@@ -195,7 +195,6 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
-
     return
 
     # <QUESTION 9>
