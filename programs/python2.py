@@ -30,8 +30,10 @@
     # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
-
+    new = ''
+    for char in string:
+        new += char*2
+    return new
     # <QUESTION 2>
 
     #  Write a function which returns the boolean True if the input is only divisible by one and itself.
@@ -48,7 +50,12 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    return False
+    numb = num
+    for n in range(numb-1, 1, -1):
+        if numb%n == 0:
+            return False
+    return True
+
 
     # <QUESTION 3>
 
@@ -65,7 +72,9 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 def three(a):
-    return 1
+    num = a
+    total = a + (a*11) + (a*111) + (a*1111)
+    return total
 
     # <QUESTION 4>
 
@@ -94,7 +103,10 @@ def three(a):
     # How would you seperate a string into characters?
 
 def four(string1, string2):
-    return ""
+    c1 = string1
+    c2 = string2
+    string = "".join([c1[i] + c2[i] for i in range(len(c1))]) + c2[len(c1):]
+    return string
 
     # <QUESTION 5>
 
