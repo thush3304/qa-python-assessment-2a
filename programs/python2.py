@@ -123,7 +123,9 @@ def four(string1, string2):
     # The random module contains a function called randint.
 
 def five():
-    return []
+    import random
+    rand = random.sample([i for i in range(100,200) if i%2==0],5)
+    return rand
 
     # <QUESTION 6>
 
@@ -142,7 +144,8 @@ def five():
     # There are no hints for this question.
     
 def six(string):
-    return False
+    stri = string.lower()
+    return stri.endswith('py')
 
     # <QUESTION 7>
 
@@ -166,8 +169,16 @@ def six(string):
     # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-    return False
-
+    a1 = a
+    b1 = b
+    c1 = c
+    list1=[]
+    list1.append(a1)
+    list1.append(b1)
+    list1.append(c1)
+    sort = sorted(list1)
+    return int(sort[2]) - int(sort[1]) == int(sort[1]) - int(sort[0])
+    
     # <QUESTION 8>
 
     # Given a string and an integer, n, return a string that removes n letters from the 'middle' of the string.
