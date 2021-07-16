@@ -245,5 +245,11 @@ def nine(string1, string2):
     # Think about nesting for loops.
 
 def ten(a, b):
+    col = a
+    row = b
+    arr = [[0 for c in range(col)] for r in range(row)]
+    for i in range(row):
+        for j in range(col):
+            arr[i][j]= i*j
 
-    return []
+    return arr
